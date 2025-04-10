@@ -1,0 +1,121 @@
+/**
+ * pages/index.css
+ */
+
+#ishinLogo {
+    height: auto;
+    right: 0;
+    left: 50%;
+    max-width: 95vw;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+#victoryImage {
+    bottom: 0;
+    position: absolute;
+}
+
+#catchphrase {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+#nameText {
+    width: 80%;
+    text-align: end;
+    position: absolute;
+    transform: translate(-50%, 0);
+}
+#nameText p {
+    margin-right: -.5em;
+}
+
+@media (max-width: 639px) {
+    #victoryImage {
+        height: 60%;
+        right: 0;
+    }
+
+    #ishinLogo {
+        width: 50%;
+        min-width: 200px;
+        top: calc(-40px - 2vh);
+    }
+
+    #catchphrase {
+        font-size: 7vw;
+        transform: translate(-50%, -50%);
+    }
+
+    #nameText {
+        font-size: 9vw;
+        bottom: 3rem;
+        padding: 1rem 2rem;
+    }
+    #nameText p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 640px) {
+    #victoryImage {
+        height: 95%;
+        right: 10%;
+        left: auto;
+        transform: none;
+    }
+
+    #ishinLogo {
+        width: 30%;
+        min-width: 300px;
+        top: -15vh;
+        max-height: 15vh;
+        object-fit: contain
+    }
+
+    #catchphrase {
+        font-size: 3.6vw;
+        transform: translate(-50%, -70%);
+    }
+
+    #nameText{
+        font-size: 6vw;
+        bottom: 5vh;
+        padding: 3.5vh 8vh;
+    }
+    #nameText p {
+        font-size: calc(1rem + .5vw);
+    }
+}
+
+/* 2xl 1536px以上 */
+@media (min-width: 1536px) {
+    #nameText{
+        font-size: 90px;
+        bottom: 50px;
+        padding: 35px 90px;
+    }
+    #nameText p {
+        font-size: calc(1rem + 8px);
+    }
+}
+
+/* 高さの制限 */
+@media (max-height: 450px) {
+    #line1, #line2 {
+        margin: 0 auto;
+    }
+    #nameText{
+        font-size: 2.4rem;
+        line-height: 1.2;
+        bottom: 2rem;
+        padding: 1rem 2rem;
+    }
+    #nameText p {
+        font-size: 1rem;
+        line-height: 1.1;
+    }
+}

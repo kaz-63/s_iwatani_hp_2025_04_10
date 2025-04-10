@@ -1,0 +1,58 @@
+/**
+ * style.css
+ */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    background-image: url(../images/background.webp);
+    background-size: cover;
+    background-position: center;
+
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.text-shadow {
+    text-shadow: .1em .1em .2em gray;
+    -webkit-text-shadow: .1em .1em .2em gray;
+    -moz-text-shadow: .1em .1em .2em gray;
+    -o-text-shadow: .1em .1em .2em gray;
+    -ms-text-shadow: .1em .1em .2em gray;
+}
+
+/* ふりがな */
+ruby rt {
+    line-height: 2;
+    font-size: 40%;
+    padding-bottom: 0.1em;
+}
+
+#pageName {
+    width: 80%;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+@media (max-width: 639px) {
+    #pageName {
+        font-size: 7vw;
+    }
+    main {
+        padding-top: calc(7vw + 4rem);
+    }
+}
+
+@media (min-width: 640px) {
+    #pageName {
+        font-size: 3.6vw;
+    }
+    main {
+        padding-top: calc(3.6vw + 8rem);
+    }
+}

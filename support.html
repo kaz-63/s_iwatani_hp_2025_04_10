@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> | 岩谷しげなりホームページ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/menu.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="robots" content="noindex" />
+  
+  <meta property="pageName" content="支援のお願い">
+  <script src="assets/js/pageInit.js"></script>
+</head>
+<body>
+  <header class="fixed top-0 left-0 w-full z-50 bg-opacity-0 text-white">
+    <div class="flex justify-between items-center px-4 py-3">
+      <!-- PCメニュー -->
+      <nav class="hidden sm:flex space-x-6 font-semibold text-lg">
+        <a href="index.html" class="hover:text-red-600">トップ</a>
+        <a href="profile.html" class="hover:text-red-600">プロフィール</a>
+        <a href="greeting.html" class="hover:text-red-600">あいさつ</a>
+        <a href="policy.html" class="hover:text-red-600">政策</a>
+        <a href="support.html" class="hover:text-red-600">支援のお願い</a>
+      </nav>
+      <!-- ハンバーガー -->
+      <button class="hamburger-overlay sm:hidden" aria-label="メニュー" aria-controls="overlay-menu" aria-expanded="false">
+        <span class="hamburger-overlay__line"></span>
+        <span class="hamburger-overlay__line"></span>
+        <span class="hamburger-overlay__line"></span>
+      </button>
+    </div>
+    <!-- モバイルメニュー -->
+    <nav id="overlay-menu" class="nav-overlay text-black" aria-hidden="true">
+      <div class="nav-overlay__content">
+        <ul class="nav-overlay__list">
+          <li class="nav-overlay__item"><a href="index.html" class="nav-overlay__link">トップ</a></li>
+          <li class="nav-overlay__item"><a href="profile.html" class="nav-overlay__link">プロフィール</a></li>
+          <li class="nav-overlay__item"><a href="greeting.html" class="nav-overlay__link">あいさつ</a></li>
+          <li class="nav-overlay__item"><a href="policy.html" class="nav-overlay__link">政策</a></li>
+          <li class="nav-overlay__item"><a href="support.html" class="nav-overlay__link">支援のお願い</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- アニメーション領域 -->
+  <div id="app" class="relative w-screen min-h-screen pt-[64px] sm:pt-[64px] mb-12">
+
+    <!-- キャッチコピー -->
+    <h1 id="pageName" class="absolute text-white text-center font-semibold space-y-4 opacity-0 "></h1>
+
+    <!-- Main -->
+    <!-- Main -->
+    <!-- Main -->
+    <main class="opacity-0 mx-auto" style="max-width: 95%;">
+      <section class="max-w-3xl mx-auto px-4 sm:px-8 py-12 text-white text-base sm:text-lg leading-relaxed space-y-10">
+
+        <div class="text-center">
+          <!-- <h1 class="text-2xl sm:text-3xl font-bold text-red-500 mb-4">【支援のお願い】</h1> -->
+          <p class="text-left">
+            岩谷しげなりは、「しがらみの無い政治」を実現するために、団体や企業からの寄付を受けずに活動しております。
+            一方で、広報誌やポスターの作成、市政報告会の開催、事務所の維持費等、
+            市民の皆さまに岩谷の政策を訴えていく活動をするに際し、どうしても費用が発生してしまいます。<br><br>
+            岩谷の理念・政策に共感し、ご寄付いただける方は、下記までご一報いただければと存じます。
+          </p>
+        </div>
+      
+        <div class="bg-gray-800 bg-opacity-70 rounded-lg shadow-lg p-6">
+          <h2 class="text-xl font-semibold mb-4 text-yellow-300">ご支援方法</h2>
+          <ul class="space-y-2 pl-4 list-disc">
+            <li><strong>年会費：</strong>一口３，０００円</li>
+            <li><strong>連絡先：</strong>070-8939-9970（岩谷しげなり後援会事務所）</li>
+          </ul>
+        </div>
+      
+        <div class="border border-yellow-300 rounded-lg p-6 bg-yellow-50 text-black">
+          <h2 class="text-lg font-bold mb-3 text-red-700">＜寄付に関する注意事項＞</h2>
+          <ul class="space-y-2 pl-4 list-disc">
+            <li>政治資金規正法に基づき、寄付金として適正に処理させていただきます。</li>
+            <li>個人から特定の政治団体に対する寄付は、年間150万円が上限です。</li>
+            <li>寄付金控除が受けられます。</li>
+            <li>他人名義または匿名での寄付はできません。</li>
+            <li>法律上、外国籍の方から寄付をいただくことはできません。</li>
+            <li>年間5万円以上の寄付については、政治資金収支報告書に、氏名・住所・職業・金額などが記載され、開示されます。</li>
+          </ul>
+        </div>
+      
+      </section>
+      
+    </main>
+    <!-- /Main -->
+    <!-- /Main -->
+    <!-- /Main -->
+
+  </div>
+
+  <footer class="bg-gray-900 text-white text-sm mt-0">
+    <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8">
+      
+      <!-- 岩谷しげなり事務所 -->
+      <div>
+        <div class="mx-auto" style="max-width: 15rem;">
+          <h2 class="text-lg font-semibold mb-2 text-center">岩谷しげなり事務所</h2>
+          <p>〒652-0046</p>
+          <p>兵庫県神戸市兵庫区上沢通1丁目3-2<br>湊川公園パークハウス103号室</p>
+          <p class="mt-2">電話: <a href="tel:07089399970" class="hover:underline">070-8939-9970</a></p>
+          <p>メール: <a href="mailto:mail@s-iwatani.com" class="hover:underline">mail@s-iwatani.com</a></p>
+        </div>
+      </div>
+
+      <hr class="mx-10 sm:hidden">
+  
+      <!-- 日本維新の会・神戸市会議員団 -->
+      <div>
+        <div class="mx-auto" style="max-width: 16rem;">
+          <h2 class="text-lg font-semibold mb-2 text-center">日本維新の会・神戸市会議員団</h2>
+          <p>〒650-8570</p>
+          <p>兵庫県神戸市中央区加納町6丁目5-1<br>1号館29階</p>
+          <p class="mt-2">TEL: <a href="tel:0783220185" class="hover:underline">078-322-0185</a></p>
+          <p>FAX: 078-322-0184</p>
+        </div>
+      </div>
+    
+    </div>
+  
+    <div class="text-center border-t border-gray-700 py-4 text-xs text-gray-400">
+      &copy; 2025 岩谷しげなり事務所. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
