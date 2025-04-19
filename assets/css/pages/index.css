@@ -35,7 +35,7 @@
 
 @media (max-width: 639px) {
     #victoryImage {
-        height: 60%;
+        height: 66%;
         right: 0;
     }
 
@@ -52,7 +52,7 @@
 
     #nameText {
         font-size: 9vw;
-        bottom: 3rem;
+        bottom: 5rem;
         padding: 1rem 2rem;
     }
     #nameText p {

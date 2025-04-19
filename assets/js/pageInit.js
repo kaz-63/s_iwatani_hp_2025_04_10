@@ -25,7 +25,7 @@
       if (pageFile) {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = `assets/css/pages/${pageFile}.css`;
+        link.href = `assets/css/pages/${pageFile}.css?v=1.0.1`;
         document.head.appendChild(link);
   
         // <nav> 内の <a> に current クラスを追加して href を "#" に変更
