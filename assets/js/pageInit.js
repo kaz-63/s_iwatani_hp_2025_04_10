@@ -36,6 +36,27 @@
           }
         });
       }
+
+      // SNSボタンの生成
+      const snsButtonsList = document.querySelectorAll(".sns_buttons");
+      snsButtonsList.forEach(function (snsButtons) {
+        snsButtons.innerHTML = `
+          <!-- Twitter -->
+          <a href="https://x.com/Shige_Iwatani" target="_blank" aria-label="Twitter" class="text-white text-2xl hover:text-blue-400 transition">
+            <i class="fab fa-twitter"></i>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/shige_iwatani/" target="_blank" aria-label="Instagram" class="text-white text-2xl hover:text-pink-500 transition">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <!-- YouTube -->
+          <a href="https://youtube.com/" target="_blank" aria-label="YouTube" class="text-white text-2xl hover:text-red-500 transition">
+            <i class="fab fa-youtube"></i>
+          </a>
+        `;
+      });
     });
   }());
   

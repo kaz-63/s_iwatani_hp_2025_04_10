@@ -7,21 +7,25 @@ html {
     padding: 0;
     height: 100%;
     overflow-x: hidden;
-    background-image: url(../images/background.webp);
+    /* background-image: url(../images/background.webp); */
     background-size: cover;
     background-position: center;
 
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "IBM Plex Sans JP", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-}
 
+}
+.text-xxs {
+    font-size: 0.5rem;
+    line-height: 0.75rem;
+}
 .text-shadow {
-    text-shadow: .1em .1em .2em gray;
-    -webkit-text-shadow: .1em .1em .2em gray;
-    -moz-text-shadow: .1em .1em .2em gray;
-    -o-text-shadow: .1em .1em .2em gray;
-    -ms-text-shadow: .1em .1em .2em gray;
+    text-shadow: .05em .05em .1em gray;
+    -webkit-text-shadow: .05em .05em .1em gray;
+    -moz-text-shadow: .05em .05em .1em gray;
+    -o-text-shadow: .05em .05em .1em gray;
+    -ms-text-shadow: .05em .05em .1em gray;
 }
 
 /* ふりがな */

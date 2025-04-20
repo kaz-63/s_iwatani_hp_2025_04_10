@@ -6,18 +6,36 @@
   <title> | 岩谷しげなりホームページ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/menu.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  
+  <link rel="stylesheet" href="assets/css/menu.css?v=1.0.1" />
+  <link rel="stylesheet" href="assets/css/style.css?v=1.0.1" />
   <meta name="robots" content="noindex" />
   
   <meta property="pageName" content="プロフィール">
-  <script src="assets/js/pageInit.js"></script>
+  
+  <script src="assets/js/pageInit.js?v=1.0.1"></script>
+  <link rel="stylesheet" href="assets/css/pages/index.css?v=1.0.1">
+  <script type="module">
+    import preline from 'https://cdn.jsdelivr.net/npm/preline@3.0.1/+esm'
+  </script>
+    
+  <style type="text/tailwindcss">
+    @layer components {
+      .icon-arrow {
+        @apply text-white text-base sm:text-xl;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="fixed top-0 left-0 w-full z-50 bg-opacity-0 text-white">
+  <header class="fixed top-0 left-0 w-full z-50 bg-opacity-0 text-gray-800">
     <div class="flex justify-between items-center px-4 py-3">
       <!-- PCメニュー -->
       <nav class="hidden sm:flex space-x-6 font-semibold text-lg">
@@ -43,115 +61,78 @@
           <li class="nav-overlay__item"><a href="greeting.html" class="nav-overlay__link">あいさつ</a></li>
           <li class="nav-overlay__item"><a href="policy.html" class="nav-overlay__link">政策</a></li>
           <li class="nav-overlay__item"><a href="support.html" class="nav-overlay__link">支援のお願い</a></li>
+          <li class="nav-overlay__item"><div class="flex justify-center space-x-6 pt-8 sns_buttons"></div></li>
         </ul>
+
       </div>
     </nav>
   </header>
 
-  <!-- アニメーション領域 -->
-  <div id="app" class="relative w-screen min-h-screen pt-[64px] sm:pt-[64px] mb-12">
-
-    <!-- キャッチコピー -->
-    <h1 id="pageName" class="absolute text-white text-center font-semibold space-y-4 opacity-0 ">
-      プロフィール
-    </h1>
+  <div id="app" class="relative w-screen min-h-screen pt-[64px] sm:pt-[64px] mb-12 ">
+    <h1 id="pageName" class="absolute text-gray-800 text-center font-semibold space-y-4 opacity-0"></h1>
 
     <!-- Main -->
     <!-- Main -->
     <!-- Main -->
-    <main class="opacity-0 mx-auto" style="max-width: 95%;">
-
-      <div class="mb-8 mx-auto w-full max-w-3xl p-4 bg-gray-50 bg-opacity-80 rounded shadow-sm pb-8 sm:p-6 sm:pb-12 md:p-8 md:pb-14 lg:p-12 lg:pb-20">
-        <!-- プロフィール写真と氏名など -->
-        <div class="flex flex-col items-center text-center space-y-4">
-          <img
-            src="assets\images\profile_square.webp"
-            alt="正面写真"
-            class="w-60 h-60 object-cover rounded-full border-2 border-gray-300  bg-gray-200"
-          />
-          <h2 class="text-2xl font-bold">岩谷 栄成（岩谷しげなり）</h2>
-          <p class="text-gray-600">
-            神戸市兵庫区選出<br />
-            日本維新の会・神戸市会議員団
-          </p>
+    <main class="opacity-0 mx-auto max-w-7xl px-4">
+      <div class="flex flex-col md:flex-row gap-6 py-12">
+        <!-- 写真（PCでは固定） -->
+        <div class="md:w-1/3 w-full">
+          <div class="md:sticky md:top-28">
+            <img
+              src="assets/images/victory_pose_plofile.jpg"
+              alt="正面写真"
+              class="w-48 h-auto md:w-full md:h-auto object-cover rounded-lg md:rounded-2xl border-2 border-gray-300 bg-gray-200 mx-auto md:mx-0"
+            />
+          </div>
         </div>
 
-        <!-- 基本情報 -->
-        <section class="mt-8">
-          <h3 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">
-            基本情報
-          </h3>
-          <dl class="space-y-4">
-            <div>
-              <dt class="font-semibold">氏名</dt>
-              <dd class="ml-4 text-gray-700">岩谷 栄成（岩谷しげなり）</dd>
-            </div>
-            <div>
-              <dt class="font-semibold">選挙区</dt>
-              <dd class="ml-4 text-gray-700">神戸市兵庫区</dd>
-            </div>
-            <div>
-              <dt class="font-semibold">会派</dt>
-              <dd class="ml-4 text-gray-700">
-                日本維新の会・神戸市会議員団
-              </dd>
-            </div>
-            <div>
-              <dt class="font-semibold">役職</dt>
-              <dd class="ml-4 text-gray-700">
-                神戸市議団・政調会長<br>
-                兵庫維新の会・副政調会長
-              </dd>
-            </div>
-            <div>
-              <dt class="font-semibold">趣味</dt>
-              <dd class="ml-4 text-gray-700">
-                自然散策（海辺や森の中を歩くことが好きです）
-              </dd>
-            </div>
-            <div>
-              <dt class="font-semibold">座右の書</dt>
-              <dd class="ml-4 text-gray-700 space-y-1">
-                <p>ラインホルド・ニーバー『道徳的人間と非道徳的社会』</p>
-                <p>アンドレイ・タルコフスキー『映像のポエジア−刻印された時間』</p>
-                <p>ミルトン・フリードマン著『資本主義と自由』</p>
-                <p>フリードリヒ・ハイエク『自由の条件』</p>
-              </dd>
-            </div>
-          </dl>
-        </section>
-
-        <!-- 経歴 -->
-        <section class="mt-8">
-          <h3 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">
-            経歴
-          </h3>
-          <div class="space-y-4 text-gray-700">
-            <p>
-              <strong>神戸市立六甲アイランド高校（音楽コース）</strong><br>
-              休日もほぼ無く、ピアノ、ソルフェージュ、音楽理論の研鑽の毎日。
-            </p>
-            <p>
-              <strong>大阪音楽大学作曲学科（卒業時、最優秀賞）</strong><br>
-              ２０世紀以降の「現代音楽」と呼ばれる分野の分析・作曲を行い、
-              国内外で作曲・演奏・指導活動。<br>
-              在学中は明治安田クオリティオブライフ文化財団奨学生に選出。
-            </p>
-            <p>
-              <strong>慶應義塾大学法学部政治学科</strong><br>
-              国際政治学者の細谷雄一教授のゼミに所属。<br>
-              主に国際政治史や政治思想について学ぶ。
-            </p>
-            <p>
-              <strong>京都大学法科大学院（法務博士号取得）</strong><br>
-              司法試験合格、弁護士資格取得。<br>
-              医療問題や家庭、労働問題等、多岐に渡る分野に奔走。
-            </p>
-            <p>
-              <strong>2023年4月 神戸市会議員選挙（兵庫区）初当選</strong>
+        <!-- 右側のプロフィール情報 -->
+        <div class="md:w-2/3 w-full space-y-10">
+          <!-- 名前と所属 -->
+          <div class="space-y-3 text-center md:text-left font-bold">
+            <h2 class="text-2xl font-extrabold">
+              <ruby>岩谷<rt>いわたに</rt></ruby> 栄成（<ruby>岩谷<rt>いわたに</rt></ruby>しげなり）
+            </h2>
+            <p class="text-gray-600">
+              神戸市兵庫区選出<br />
+              日本維新の会・神戸市会議員団
             </p>
           </div>
-        </section>
+
+          <!-- 基本情報 -->
+          <section class="font-bold">
+            <h3 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">基本情報</h3>
+            <dl class="space-y-4 text-gray-700">
+              <div><dt class="font-semibold">氏名</dt><dd class="ml-4">岩谷 栄成（岩谷しげなり）</dd></div>
+              <div><dt class="font-semibold">選挙区</dt><dd class="ml-4">神戸市兵庫区</dd></div>
+              <div><dt class="font-semibold">会派</dt><dd class="ml-4">日本維新の会・神戸市会議員団</dd></div>
+              <div><dt class="font-semibold">役職</dt><dd class="ml-4">神戸市議団・政調会長<br>兵庫維新の会・副政調会長</dd></div>
+              <div><dt class="font-semibold">趣味</dt><dd class="ml-4">自然散策（海辺や森の中を歩くことが好きです）</dd></div>
+              <div>
+                <dt class="font-semibold">座右の書</dt>
+                <dd class="ml-4 space-y-1">
+                  <p>ラインホルド・ニーバー『道徳的人間と非道徳的社会』</p>
+                  <p>アンドレイ・タルコフスキー『映像のポエジア−刻印された時間』</p>
+                  <p>ミルトン・フリードマン著『資本主義と自由』</p>
+                  <p>フリードリヒ・ハイエク『自由の条件』</p>
+                </dd>
+              </div>
+            </dl>
+          </section>
+
+          <!-- 経歴 -->
+          <section>
+            <h3 class="text-xl font-semibold border-b border-gray-300 pb-2 mb-4">経歴</h3>
+            <div class="space-y-4 text-gray-700">
+              <p><strong>神戸市立六甲アイランド高校（音楽コース）</strong><br>休日もほぼ無く、ピアノ、ソルフェージュ、音楽理論の研鑽の毎日。</p>
+              <p><strong>大阪音楽大学作曲学科（卒業時、最優秀賞）</strong><br>２０世紀以降の「現代音楽」と呼ばれる分野の分析・作曲を行い、国内外で作曲・演奏・指導活動。<br>在学中は明治安田クオリティオブライフ文化財団奨学生に選出。</p>
+              <p><strong>慶應義塾大学法学部政治学科</strong><br>国際政治学者の細谷雄一教授のゼミに所属。主に国際政治史や政治思想について学ぶ。</p>
+              <p><strong>京都大学法科大学院（法務博士号取得）</strong><br>司法試験合格、弁護士資格取得。医療問題や家庭、労働問題等、多岐に渡る分野に奔走。</p>
+              <p><strong>2023年4月 神戸市会議員選挙（兵庫区）初当選</strong></p>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
     <!-- /Main -->
@@ -160,9 +141,15 @@
 
   </div>
 
-  <footer class="bg-gray-900 text-white text-sm mt-0">
+  <footer class="bg-gray-900 text-white text-sm">
+    
+    <!-- SNS -->
+    <div class="bg-gray-900 pt-6">
+      <div class="flex justify-center space-x-6 sns_buttons"></div>
+    </div>
+
     <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8">
-      
+
       <!-- 岩谷しげなり事務所 -->
       <div>
         <div class="mx-auto" style="max-width: 15rem;">
@@ -175,7 +162,7 @@
       </div>
 
       <hr class="mx-10 sm:hidden">
-  
+
       <!-- 日本維新の会・神戸市会議員団 -->
       <div>
         <div class="mx-auto" style="max-width: 16rem;">
@@ -186,9 +173,9 @@
           <p>FAX: 078-322-0184</p>
         </div>
       </div>
-    
+
     </div>
-  
+
     <div class="text-center border-t border-gray-700 py-4 text-xs text-gray-400">
       &copy; 2025 岩谷しげなり事務所. All rights reserved.
     </div>

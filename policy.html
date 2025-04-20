@@ -6,18 +6,36 @@
   <title> | 岩谷しげなりホームページ</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/menu.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  
+  <link rel="stylesheet" href="assets/css/menu.css?v=1.0.1" />
+  <link rel="stylesheet" href="assets/css/style.css?v=1.0.1" />
   <meta name="robots" content="noindex" />
   
-  <meta property="pageName" content="政策">
-  <script src="assets/js/pageInit.js"></script>
+  <meta property="pageName" content="政策" />
+
+  <script src="assets/js/pageInit.js?v=1.0.1"></script>
+  <link rel="stylesheet" href="assets/css/pages/index.css?v=1.0.1">
+  <script type="module">
+    import preline from 'https://cdn.jsdelivr.net/npm/preline@3.0.1/+esm'
+  </script>
+    
+  <style type="text/tailwindcss">
+    @layer components {
+      .icon-arrow {
+        @apply text-white text-base sm:text-xl;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="fixed top-0 left-0 w-full z-50 bg-opacity-0 text-white">
+  <header class="fixed top-0 left-0 w-full z-50 bg-opacity-0 text-gray-800">
     <div class="flex justify-between items-center px-4 py-3">
       <!-- PCメニュー -->
       <nav class="hidden sm:flex space-x-6 font-semibold text-lg">
@@ -43,23 +61,24 @@
           <li class="nav-overlay__item"><a href="greeting.html" class="nav-overlay__link">あいさつ</a></li>
           <li class="nav-overlay__item"><a href="policy.html" class="nav-overlay__link">政策</a></li>
           <li class="nav-overlay__item"><a href="support.html" class="nav-overlay__link">支援のお願い</a></li>
+          <li class="nav-overlay__item"><div class="flex justify-center space-x-6 pt-8 sns_buttons"></div></li>
         </ul>
+
       </div>
     </nav>
   </header>
 
   <!-- アニメーション領域 -->
-  <div id="app" class="relative w-screen min-h-screen pt-[64px] sm:pt-[64px] mb-12">
-
+  <div id="app" class="relative w-screen min-h-screen pt-[64px] sm:pt-[64px] mb-12 font-bold">
     <!-- キャッチコピー -->
-    <h1 id="pageName" class="absolute text-white text-center font-semibold space-y-4 opacity-0 "></h1>
+    <h1 id="pageName" class="absolute text-gray-800 text-center font-semibold space-y-4 opacity-0 "></h1>
 
     <!-- Main -->
     <!-- Main -->
     <!-- Main -->
     <main class="opacity-0 mx-auto" style="max-width: 95%;"><div class="space-y-16 px-4 sm:px-12 py-12">
 
-      <section class="text-white py-16 px-4 sm:px-10 text-center mb-20 text-shadow">
+      <section class="text-gray-800 py-16 px-4 sm:px-10 text-center mb-20 text-shadow">
         <div class="bg-red-800 text-white text-center py-8 px-6 rounded-md shadow-md">
           <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold ">岩谷の三本柱</h2>
         </div>
@@ -77,7 +96,7 @@
       </div>
     
       <div class="flex flex-col sm:flex-row items-center sm:items-start gap-8">
-        <div class="sm:w-1/2 text-white text-base md:text-lg leading-relaxed space-y-6">
+        <div class="sm:w-1/2 text-gray-800 text-base md:text-lg leading-relaxed space-y-6">
           <div>
             <h3 class="text-lg md:text-xl font-bold text-red-400 mb-2">✔️関西経済圏の広域連携強化、成長の果実を神戸へ！</h3>
             <p>神戸だけで、東京一極集中を打破し経済成長を実現することは困難です。「国際金融都市」を目指す成長著しい大阪や、文化伝統都市の京都といった関西各都市とあらゆる垣根を越えて連携を強化します。</p>
@@ -103,7 +122,7 @@
       </div>
     
       <div class="flex flex-col sm:flex-row-reverse items-center sm:items-start gap-8">
-        <div class="sm:w-1/2 text-white text-base md:text-lg leading-relaxed space-y-6">
+        <div class="sm:w-1/2 text-gray-800 text-base md:text-lg leading-relaxed space-y-6">
           <div>
             <h3 class="text-lg md:text-xl font-bold text-red-400 mb-2">✔️民間で出来ることは民間で！</h3>
             <p>これまでの神戸市は、ワイン作りから、空港、動物園、鉄道、下水道の管理・更新などなど・・・本来行政がやらなくても良い、民間で出来る事業を沢山してきました。「株式会社神戸市」という言葉もあったくらいです。それで通用したのは、高度経済成長期の時の話。現在のような人口減少局面においては、より効率的でスマートな行政運営が求められています。民間の知見・活力を存分に取り入れ、住民サービスの向上に繋げます。</p>
@@ -129,7 +148,7 @@
       </div>
     
       <div class="flex flex-col sm:flex-row items-center sm:items-start gap-8">
-        <div class="sm:w-1/2 text-white text-base md:text-lg leading-relaxed space-y-6">
+        <div class="sm:w-1/2 text-gray-800 text-base md:text-lg leading-relaxed space-y-6">
           <div>
             <h3 class="text-lg md:text-xl font-bold text-red-400 mb-2">✔️ 急速な技術革新に対応した教育改革</h3>
             <p>AI技術等の進展により、世界は目まぐるしく変化し、予測不可能な時代へ。新時代を生き抜くためには、これまでの知識詰め込み偏重の教育だけでは到底対応できません。また、前時代的な一斉・集団教育も限界に来ています。子供達が持つ個性・才能を存分に高め、新時代に対応できる次世代型教育への転換を図ります。</p>
@@ -155,7 +174,7 @@
       </div>
     
       <div class="flex flex-col sm:flex-row-reverse items-center sm:items-start gap-8">
-        <div class="sm:w-1/2 text-white text-base md:text-lg leading-relaxed space-y-6">
+        <div class="sm:w-1/2 text-gray-800 text-base md:text-lg leading-relaxed space-y-6">
           <div>
             <h3 class="text-lg md:text-xl font-bold text-red-400 mb-2">✔️ 生きがいと健康寿命の延伸を支援</h3>
             <p>「人生１００年時代」と言われて久しいですが、それも健康でなければ謳歌することはできません。また、ご家族の負担の観点も忘れてはなりません。生きがい創出やフレイル予防、孤独対策等の拡充を行って参ります。</p>
@@ -177,7 +196,7 @@
       </div>
     
       <div class="flex flex-col sm:flex-row items-center sm:items-start gap-8">
-        <div class="sm:w-1/2 text-white text-base md:text-lg leading-relaxed space-y-6">
+        <div class="sm:w-1/2 text-gray-800 text-base md:text-lg leading-relaxed space-y-6">
           <div>
             <h3 class="text-lg md:text-xl font-bold text-red-400 mb-2">✔️議員報酬・議員定数の削減！</h3>
             <p>神戸市会議員の議員報酬は、なんと全国の政令市の中で2番目に高額です。民間感覚からかけ離れ、時代にも合っていない議会のあり方を変えていきます。なお我々、日本維新の会の議員は、報酬の2割を受け取らず被災地に毎年寄付しています。</p>
@@ -199,6 +218,12 @@
   </div>
 
   <footer class="bg-gray-900 text-white text-sm mt-0">
+
+    <!-- SNS -->
+    <div class="bg-gray-900 pt-6">
+      <div class="flex justify-center space-x-6 sns_buttons"></div>
+    </div>
+
     <div class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-2 gap-8">
       
       <!-- 岩谷しげなり事務所 -->
