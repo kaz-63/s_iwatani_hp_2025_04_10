@@ -70,12 +70,7 @@
   </header>
 
   <!-- アニメーション領域 -->
-  <div id="app" class="relative w-screen min-h-screen pt-[64px] sm:pt-[64px] overflow-hidden">
-      <img
-        src="https://placehold.jp/30px/646464/ffffff/1980x1080.jpg?text=トップ画像準備中"
-        alt="トップ画像準備中"
-        class="w-screen min-h-screen sm:h-[60vh] md:h-[80vh] object-cover"
-      />
+  <!-- <div id="app" class="relative w-screen min-h-screen pt-[64px] sm:pt-[64px]"> -->
 
     <!-- キャッチコピー -->
     <!-- <div id="catchphrase" class="absolute text-gray-800 text-center font-semibold space-y-4 z-10 text-shadow">
@@ -95,6 +90,22 @@
         弁護士 &nbsp; 
       </p>
     </div> -->
+  <!-- </div> -->
+
+  <div id="app" class="relative pt-[64px] sm:pt-[64px] overflow-hidden">
+    <picture>
+      <!-- スマホ（〜639px）専用 -->
+      <source
+        srcset="assets/images/top_image_mobile.jpg"
+        media="(max-width: 639px)"
+      />
+      <!-- PC（640px〜） -->
+      <img
+        src="assets/images/top_image_pc.jpg"
+        alt="トップ画像"
+        class="mx-auto max-w-full  md:min-h-screen  sm:h-[80vh] sm:object-cover"
+      />
+    </picture>
   </div>
 
   <div class="bg-gray-200 py-12">
@@ -167,8 +178,6 @@
     </div>
     
   </div>
-
-  
   
   <footer class="bg-gray-900 text-white text-sm mt-0">
     
