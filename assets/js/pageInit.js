@@ -40,20 +40,24 @@
       // SNSボタンの生成
       const snsButtonsList = document.querySelectorAll(".sns_buttons");
       snsButtonsList.forEach(function (snsButtons) {
+        const isFixed = snsButtons.classList.contains("fixed");
         snsButtons.innerHTML = `
           <!-- Twitter -->
-          <a href="https://x.com/Shige_Iwatani" target="_blank" aria-label="Twitter" class="text-white text-2xl hover:text-blue-400 transition">
-            <i class="fab fa-twitter"></i>
+          <a href="https://x.com/shige_iwatani?s=21&t=pjyGOprN_CCBwzgybe2kZQ" target="_blank" rel="noopener noreferrer" aria-label="Twitter"
+            class="text-white text-2xl ${isFixed ? 'hover:scale-125' : 'hover:text-blue-400'} transition">
+            <i class="fab fa-twitter" aria-hidden="true"></i>
           </a>
 
           <!-- Instagram -->
-          <a href="https://www.instagram.com/shige_iwatani/" target="_blank" aria-label="Instagram" class="text-white text-2xl hover:text-pink-500 transition">
-            <i class="fab fa-instagram"></i>
+          <a href="https://www.instagram.com/shige_iwatani?igsh=aHlzenJnaXA2dHY1&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+            class="text-white text-2xl ${isFixed ? 'hover:scale-125' : 'hover:text-pink-500'} transition">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
           </a>
-
+  
           <!-- YouTube -->
-          <a href="https://youtube.com/" target="_blank" aria-label="YouTube" class="text-white text-2xl hover:text-red-500 transition">
-            <i class="fab fa-youtube"></i>
+          <a href="https://m.youtube.com/channel/UCXcHL3vsOvQonUyZBkQ9EOA/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"
+            class="text-white text-2xl ${isFixed ? 'hover:scale-125' : 'hover:text-red-500'} transition">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
           </a>
         `;
       });

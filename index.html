@@ -21,7 +21,7 @@
 
   <meta property="pageName" content="トップページ">
   
-  <script src="assets/js/pageInit.js?v=1.0.1"></script>
+  <script src="assets/js/pageInit.js?v=1.0.2"></script>
   <link rel="stylesheet" href="assets/css/pages/index.css?v=1.0.1">
   <script type="module">
     import preline from 'https://cdn.jsdelivr.net/npm/preline@3.0.1/+esm'
@@ -42,7 +42,7 @@
       <nav class="hidden sm:flex space-x-6 font-semibold text-lg">
         <a href="index.html" class="hover:text-red-600">トップ</a>
         <a href="profile.html" class="hover:text-red-600">プロフィール</a>
-        <a href="greeting.html" class="hover:text-red-600">あいさつ</a>
+        <!-- <a href="greeting.html" class="hover:text-red-600">あいさつ</a> -->
         <a href="policy.html" class="hover:text-red-600">政策</a>
         <a href="support.html" class="hover:text-red-600">支援のお願い</a>
       </nav>
@@ -59,7 +59,7 @@
         <ul class="nav-overlay__list">
           <li class="nav-overlay__item"><a href="index.html" class="nav-overlay__link">トップ</a></li>
           <li class="nav-overlay__item"><a href="profile.html" class="nav-overlay__link">プロフィール</a></li>
-          <li class="nav-overlay__item"><a href="greeting.html" class="nav-overlay__link">あいさつ</a></li>
+          <!-- <li class="nav-overlay__item"><a href="greeting.html" class="nav-overlay__link">あいさつ</a></li> -->
           <li class="nav-overlay__item"><a href="policy.html" class="nav-overlay__link">政策</a></li>
           <li class="nav-overlay__item"><a href="support.html" class="nav-overlay__link">支援のお願い</a></li>
           <li class="nav-overlay__item"><div class="flex justify-center space-x-6 pt-8 sns_buttons"></div></li>
@@ -179,6 +179,9 @@
     
   </div>
   
+  <!-- 固定表示のSNSボタン -->
+  <div class="sns_buttons fixed left-4 bottom-4 z-40 hidden sm:flex flex-col space-y-3 bg-red-600 p-4 text-center rounded-md"></div>
+
   <footer class="bg-gray-900 text-white text-sm mt-0">
     
     <!-- SNS -->
